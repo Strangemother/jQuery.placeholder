@@ -1,6 +1,8 @@
 jQuery Placeholder
 ------------------
 
+Please refer to the packaged example.html for use examples
+
 The jQuery placeholder easily allows you to emulate the ``placeholder=''`` attribute on input fields for all browsers. 
 This allows you to have a grey prompt within an input field until the user begins typing. As this feature is not
 yet fully implemented on all browsers, this jQuery plugin will fill in the gaps.
