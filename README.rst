@@ -83,27 +83,27 @@ Degradation
 ===========
 
 ---
-Allowed placeholder
-Has placeholder
-Override not set
+ - Allowed placeholder
+ - Has placeholder
+ - Override not set
 
   Value will be that of the markup ``placeholder`` - applied as the ``placeholder`` attribute
 
 ---
-Allowed placeholder
-Has placeholder
-Override is set
+ - Allowed placeholder
+ - Has placeholder
+ - Override is set
 
   Value will be that of the string passed to the plugin - applied as the ``placeholder`` attribute
 
 ---
-Allowed placeholder
-No placeholder
+ - Allowed placeholder
+ - No placeholder
 
   Value will be that of the string passed to the plugin - applied as the ``placeholder`` attribute
   
 ---
-Not Allowed placeholder
+ - Not Allowed placeholder
 
   Value will be that of the string passed to the plugin - handled by the javascript
 
