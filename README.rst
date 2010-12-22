@@ -82,6 +82,8 @@ You may pass two parameters into the plugin.
 Degradation
 ===========
 
+A light description of how the fallback will proceed.
+
 ---
  - Allowed placeholder
  - Has placeholder
