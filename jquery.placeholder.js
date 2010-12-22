@@ -12,7 +12,7 @@ page = this;
   $.fn.placeholder = function() {
 
       var _overridden = false;
-
+      var _defaultValue = 'Type Here'
       var placeholderValue = null;
       var suggestedPlaceholder = null;
       var overridePlaceholder = false;
@@ -21,6 +21,9 @@ page = this;
       
       var self = this;
       
+      var _placeholderSupported = null;
+      var _hasPlaceholder = null;
+      
       /**
        * construct
        */
@@ -28,11 +31,13 @@ page = this;
         
         this.parseArguments(args)
 
+        _placeholderSupported = this.placeHolderSupported()
+        _hasPlaceholder = this.hasPlaceholder()
+        
         if(this.placeHolderSupported() && !this.hasPlaceholder())
         {
-          overridePlaceholder = true
+          Placeholder = true
         }
-        
         /**
          * first check to see if the override has been forced 
          * attempt to apply the attribute before checking to see if
@@ -47,7 +52,7 @@ page = this;
         
         if(this.placeHolderSupported())
         {
-            //s.say("Native placeholder has been applied. Overidden?(" + overridePlaceholder + ") - Value = "  + this.getPlaceholderValue())
+          //do nothing - browser will take charge
         }
         else
         {
@@ -84,7 +89,7 @@ page = this;
         switch(args.length)
         {
           case 0:
-            suggestedPlaceholder = 'Search'
+            suggestedPlaceholder = _defaultValue
             break;
           case 3:
             color = args[2]
@@ -130,7 +135,7 @@ page = this;
       this.hasPlaceholder = function(){
         var val = this.attr('placeholder');
         
-        if(val)
+          if(val)
         {
           if(val.length > 0)
           {
@@ -148,10 +153,15 @@ page = this;
          
          if(placeholderValue)
          {
+           
            if(overridePlaceholder)
+           {
               returnValue = suggestedPlaceholder
-              
-           returnValue = placeholderValue;
+           }
+           else
+           {
+              returnValue = placeholderValue;
+           }
          }
          else
          {
@@ -160,9 +170,8 @@ page = this;
          
          if(returnValue == null || returnValue == undefined)
          {
-           returnValue = 'Search'
+           returnValue = _defaultValue
          }
-         
          
          return returnValue;
         
@@ -175,15 +184,19 @@ page = this;
         if(arguments[0])
           el = arguments[0]
         
-        if($(el).val() == '')
+        var text = this.getPlaceholderValue()
+        
+        if($(el).val() == '' || $(el).val() == text)
         {
-          var text = this.getPlaceholderValue()
+          
           
           if(arguments[0])
               text = arguments[0]
           
           this.css('color', color)
           this.val(text)
+          this.addClass('placeholder')
+          
         }
       }
       
@@ -197,6 +210,7 @@ page = this;
         {
           this.val('')
           this.css('color', '#000000')
+          this.removeClass('placeholder')
         }
         
       }
