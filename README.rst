@@ -12,6 +12,7 @@ Browsers
 ========
 
 Tested browsers are:
+ 
 
 - Chrome 6
 - Chrome 7
