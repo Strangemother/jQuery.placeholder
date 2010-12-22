@@ -8,6 +8,11 @@ yet fully implemented on all browsers, this jQuery plugin will fill in the gaps.
 Using graceful degradation - the plugin first determines if the browser has the ``placeholder=''`` attribute. If not, 
 it will default to the javascript handling.
 
+Notes
+=====
+
+Minified version supplied by Aaron Bassett https://github.com/aaronbassett/. Cheers.
+
 Browsers
 ========
 
@@ -39,12 +44,13 @@ Use
 Its very simple to get started::
 
 1. First include the script within your page::
-      
-        <script type="text/javascript" src="js/jquery.placeholder.js"></script>
+     
+        <script type="text/javascript" src="js/jquery.placeholder.min.js"></script>
     
 For any reason you do not wish to download the file, you may request it from this address::
      
-       <script type="text/javascript" src="http://strangemother.com/public/js/jquery.placeholder.js"></script>
+       <script type="text/javascript" src="http://strangemother.com/public/js/jquery.placeholder.min.js"></script>
+
 
 2. Use the plugin just like any other jQuery extension::
 
