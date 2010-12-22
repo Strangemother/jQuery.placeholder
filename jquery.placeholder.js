@@ -36,7 +36,7 @@ page = this;
         
         if(this.placeHolderSupported() && !this.hasPlaceholder())
         {
-          Placeholder = true
+          overridePlaceholder = true
         }
         /**
          * first check to see if the override has been forced 
