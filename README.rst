@@ -11,7 +11,7 @@ it will default to the javascript handling.
 Browsers
 ========
 
-Tested browsers are::
+Tested browsers are:
 
 - Chrome 6
 - Chrome 7
@@ -31,12 +31,13 @@ Tested browsers are::
 - Safari 4 PC
 - Safari 5 PC
 
+
 Use
 ===
 
 Its very simple to get started::
 
-1. First include the script within your page.
+1. First include the script within your page::
       
         <script type="text/javascript" src="js/jquery.placeholder.js"></script>
     
@@ -53,4 +54,57 @@ For any reason you do not wish to download the file, you may request it from thi
 
 
 Your pretty much good to go! - read more for additional parameters.
+
+Options
+=======
+
+You may pass two parameters into the plugin.
+
+1. The placeholder text:
+    
+    In order to customise the value used as a placeholder you can pass a string with your placeholder text::
+    
+    $('#search').placeholder('Type your tags...');
+    
+2. Overriding default placeholder value.
+
+    With the graceful degradation, if the placeholder attribute is valid for the browser and exists within the markup
+    the plugin will not perform any actions and allow the browser to perform its standard task - however, you may
+    override the placeholder value set within the markup - with the passed value to the plugin.
+    
+    You may send a boolean of ``true`` to the plugin to override this::
+    
+    $('#search').placeholder('Type your tags...', true);
+    
+    by default this is false. It doesn't matter which is the first passed value.
+    
+Degradation
+===========
+
+---
+Allowed placeholder
+Has placeholder
+Override not set
+
+  Value will be that of the markup ``placeholder`` - applied as the ``placeholder`` attribute
+
+---
+Allowed placeholder
+Has placeholder
+Override is set
+
+  Value will be that of the string passed to the plugin - applied as the ``placeholder`` attribute
+
+---
+Allowed placeholder
+No placeholder
+
+  Value will be that of the string passed to the plugin - applied as the ``placeholder`` attribute
+  
+---
+Not Allowed placeholder
+
+  Value will be that of the string passed to the plugin - handled by the javascript
+
+
 
