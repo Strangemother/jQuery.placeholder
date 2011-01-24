@@ -12,15 +12,13 @@
             $('#input1').placeholder('J Placeholder 1');
             $('#input2').placeholder('J Placeholder 2', true);
             $('#input3').placeholder('J Placeholder 3');
-            $('#input4').placeholder();
             $('#input5').placeholder('Form Placeholder');
           });
           
         </script>
         
         <style type="text/css">
-          .override.placeholder { color: red !important; font-size: 14px; font-style: italic }
-          .button { width: 120px;}
+         .button { width: 120px;}
           html {  margin: 0; padding: 0; }
           body { margin: 0 auto; padding: 10px; font-family: Arial, Helvetica, sans-serif; width: 960px; border: solid 1px #CACACA; border-top: none; }
           p { font-size: 12px;}
@@ -63,12 +61,6 @@
           <p>An example <strong>without</strong> a placeholder attribute.<span>$('#input3').placeholder('J Placeholder 3');</span></p>
           <p><span>&lt;input type=&quot;text&quot; name=&quot;input3&quot; id=&quot;input3&quot; /&gt;</span></p>
           <input type="text" name="input3" id="input3" />
-        </div>
-        
-        <div>
-          <p>An example with CSS override. Please note, to override the color attribute append <span>!important</span> within your css definition</p>
-          <p><span>&lt;input type=&quot;text&quot; name=&quot;input3&quot; id=&quot;input3&quot; /&gt;</span></p>
-          <input type="text" class='override' name="input4" id="input4" />
         </div>
         
         <form id='myform' method='get' action="example.html">
