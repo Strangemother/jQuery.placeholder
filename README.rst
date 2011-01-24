@@ -40,6 +40,7 @@ Tested browsers are:
 - Safari 4 Mac
 - Safari 4 PC
 - Safari 5 PC
+- Safari iOS (iPad, iPhone, iPod)
 
 
 Use
