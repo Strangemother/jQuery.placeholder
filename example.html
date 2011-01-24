@@ -12,17 +12,21 @@
             $('#input1').placeholder('J Placeholder 1');
             $('#input2').placeholder('J Placeholder 2', true);
             $('#input3').placeholder('J Placeholder 3');
+            $('#input4').placeholder();
+            $('#input5').placeholder('Form Placeholder');
           });
           
         </script>
         
         <style type="text/css">
+          .override.placeholder { color: red !important; font-size: 14px; font-style: italic }
+          .button { width: 120px;}
           html {  margin: 0; padding: 0; }
           body { margin: 0 auto; padding: 10px; font-family: Arial, Helvetica, sans-serif; width: 960px; border: solid 1px #CACACA; border-top: none; }
           p { font-size: 12px;}
           span{  border: solid 1px #DDD; background: #EEE; padding: 1px 3px; font-family: "Courier New", Courier, monospace; } 
           input { width: 280px; font-size: 18px; }
-          div { border-top: solid 1px #DDD; margin-top: 20px; 
+          div { border-top: solid 1px #DDD; margin-top: 20px;};
         </style>
         
     </head>
@@ -31,7 +35,12 @@
         <h1>jQuery.placeholder() Usage Examples</h1>
         <p>This will show you a simple example of the placeholder plugin. For the purposes of this example - 
           the javascript placeholder will be '<span>J Placeholder</span>' and the placeholder within the attribute will be '<span>type something</span>'.</p>
-        
+        <h2>Version 0.2.1</h2>
+        <p>Fixed Overtyping bug. If a user were to type the same value as the placeholder the typed value is now not determined as 
+          the placeholder text. This is acheived by replacing spaces with the invisible ASCII Character 160.</p>
+        <h2>Version 0.2</h2>
+        <p>Placeholder elements will automatically attach themselves to forms. On submittion of the form, the element text within will 
+          clear if the default text exists.</p>
         <div>
           <p>Simple Example <span>$('#input').placeholder();</span></p>
           <p><span>&lt;input type=&quot;text&quot; name=&quot;input&quot; id=&quot;input&quot; /&gt;</span></p>
@@ -55,6 +64,20 @@
           <p><span>&lt;input type=&quot;text&quot; name=&quot;input3&quot; id=&quot;input3&quot; /&gt;</span></p>
           <input type="text" name="input3" id="input3" />
         </div>
+        
+        <div>
+          <p>An example with CSS override. Please note, to override the color attribute append <span>!important</span> within your css definition</p>
+          <p><span>&lt;input type=&quot;text&quot; name=&quot;input3&quot; id=&quot;input3&quot; /&gt;</span></p>
+          <input type="text" class='override' name="input4" id="input4" />
+        </div>
+        
+        <form id='myform' method='get' action="example.html">
+          <div>
+            <p>An example of the placeholder automatically binding to a form element. The input field will clear when the form is submitted.<span>$('#input3').placeholder('Form Placeholder');</span></p>
+            <p><span>&lt;input type=&quot;text&quot; name=&quot;input3&quot; id=&quot;input3&quot; /&gt;</span></p>
+            <input type="text" name="input5" id="input5" /><input class='button' type="submit" value="GO!" />
+          </div>
+        </form>
         
     </body>
 </html>
