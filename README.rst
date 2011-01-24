@@ -11,14 +11,11 @@ Using graceful degradation - the plugin first determines if the browser has the 
 it will default to the javascript handling.
 
 Fixes and Updates:
+=================
 
 0.2.0 - Feature - Automatic form handling has now been applied, ensuring form submissions do not include placeholder text
+
 0.2.1 - Bug fix - for overtyping. User typed values will not be captured as placeholder text.
-
-Notes
-=====
-
-Minified version supplied by Aaron Bassett https://github.com/aaronbassett/. Cheers.
 
 Browsers
 ========
