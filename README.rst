@@ -10,6 +10,11 @@ yet fully implemented on all browsers, this jQuery plugin will fill in the gaps.
 Using graceful degradation - the plugin first determines if the browser has the ``placeholder=''`` attribute. If not, 
 it will default to the javascript handling.
 
+Fixes and Updates:
+
+0.2.0 - Feature - Automatic form handling has now been applied, ensuring form submissions do not include placeholder text
+0.2.1 - Bug fix - for overtyping. User typed values will not be captured as placeholder text.
+
 Notes
 =====
 
