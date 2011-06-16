@@ -70,7 +70,7 @@ Your pretty much good to go! - read more for additional parameters.
 Options
 =======
 
-You may pass two parameters into the plugin.
+You may pass three parameters into the plugin.
 
 1. The placeholder text:
     
@@ -89,6 +89,14 @@ You may pass two parameters into the plugin.
     $('#search').placeholder('Type your tags...', true);
     
     by default this is false. It doesn't matter which is the first passed value.
+
+3. Overriding the default placeholder color.
+    
+    While the input element will get the ``.placeholder`` class which can be styled with CSS,
+    the color of the placeholder text is set inside the plugin. You can configure the color
+    with a third parameter:
+    
+    $('#search').placeholder('Type your tags...', true, '#ffcccc');
     
 Degradation
 ===========
